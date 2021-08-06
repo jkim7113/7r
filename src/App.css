@@ -14,10 +14,15 @@
 }
 
 .partOfSpeech{
+  font-size: 20px;
   display: inline;
   cursor: pointer;
   transition: all 0.2s;
   color:#9baec8;
+}
+
+.divider{
+  font-size: 20px;
 }
 
 .definitions{
