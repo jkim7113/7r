@@ -66,7 +66,6 @@ class App extends React.Component{
               ))
             }
         </ul>
-
         <ul>
           {
             this.state.wordInfo.map((currentWord)=>(  
