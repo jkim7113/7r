@@ -1,0 +1,64 @@
+.cards{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #6d819c;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    height:400px;
+    width:550px;
+
+  }
+
+  .inputCardData{
+    text-align: center;
+  }
+
+  .announcement{
+    margin:0;
+    margin-bottom: 20px;
+    color:white;
+    font-size: 35px;
+  }
+
+  input{
+    text-align: center;
+    color:white;
+    width:60%;
+    height:17%;
+    font-size:43px;
+    background-color: #6d819c;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom:4px solid white;
+  }
+
+  input:focus{
+    outline:none;
+  }
+  .errorMsg{
+    display: none;
+    color:#920000;
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+@media screen and (max-width:768px){
+  .cards{
+    width:310px;
+    height:520px;
+  }
+  .announcement{
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  input{
+    font-size: 35px;
+  }
+}
