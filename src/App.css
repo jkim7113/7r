@@ -1,82 +1,64 @@
+.cards{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #6d819c;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    height:500px;
+    width:687.5px;
 
-.currentSlide{
-  z-index:1;
-}
-.word{
-  font-family: sans-serif;
-  color:white;
-  font-size: 60px;
-}
+  }
 
-.partOfSpeech:hover{
-  transition: all 0.2s;
-  color:white;
-}
+  .inputCardData{
+    text-align: center;
+  }
 
-.partOfSpeech{
-  font-size: 20px;
-  display: inline;
-  cursor: pointer;
-  transition: all 0.2s;
-  color:#9baec8;
-}
+  .announcement{
+    margin:0;
+    margin-bottom: 20px;
+    color:white;
+    font-size: 35px;
+  }
 
-.divider{
-  font-size: 20px;
-}
+  input{
+    text-align: center;
+    color:white;
+    width:60%;
+    height:17%;
+    font-size:43px;
+    background-color: #6d819c;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom:4px solid white;
+  }
 
-.definitions{
-  transition: all 0.2s;
-  font-style: italic;
-  color:#9baec8;
-  text-align: left;
-}
-
-.examples{
-  transition: all 0.2s;
-  font-style: italic;
-  color:#9baec8;
-  text-align: left;
-}
-
-.wordCardData{
-  color:white;
-  text-align: center;
-}
-
-.words{
-  overflow-y: scroll;
-  z-index: 1;
-  background-color: #6d819c;
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  border-radius: 20px;
-  height:500px;
-  width:687.5px;
-  scroll-behavior: smooth;
-}
-
-.words::-webkit-scrollbar{
-  width:6px;
-}
-
-.words::-webkit-scrollbar-track{
-  margin-top:20px;
-  margin-bottom: 20px;
-}
-
-.words::-webkit-scrollbar-thumb{
-  background-color:#8a9cb4;
-  border-radius: 3px;
-  
-}  
-
+  input:focus{
+    outline:none;
+  }
+  .errorMsg{
+    display: none;
+    color:#920000;
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
 
 @media screen and (max-width:768px){
-  .words{
+  .cards{
     width:310px;
     height:520px;
+  }
+  .announcement{
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  input{
+    font-size: 35px;
   }
 }
