@@ -5,6 +5,16 @@ import { Definitions } from './Defnitions.js';
 import { Examples } from './Examples.js';
 import './Words.css';
 
+export default function Denied() {
+  return (
+    <div className='cards'>
+        <div className='inputCardData'>
+        <p className='announcement'>Access has been denied</p>
+        </div>
+      </div>
+  );
+}
+
 function Words({history, match, location}){
     
     useEffect(()=>{
@@ -92,8 +102,14 @@ function Words({history, match, location}){
         </div>
         </div>
     );
-    } else { ///:word 링크로 들어왔거나 앞으로 가기로 들어왔다면
-      if(sessionWord !== null){//앞으로 가기로 들어왔다면
+    } else { ///:word 링크로 들어왔거나 앞으로 가기 아니면 주소변경으로 들어왔다면
+      if(sessionWord !== null){//앞으로 가기나 주소변경으로 들어왔다면
+
+        if(sessionWord !== match.params.word){//주소변경으로 들어왔다면 시작화면으로
+
+          return <Denied />
+
+        } else {//앞으로 가기면 재출력
 
         sessionWord = window.sessionStorage.getItem('word');
         sessionWordInfo = JSON.parse(window.sessionStorage.getItem('wordInfo'));
@@ -133,6 +149,7 @@ function Words({history, match, location}){
               </div>
               
           );
+          }
 
       } else {///:word 링크로 들어왔다면
 
